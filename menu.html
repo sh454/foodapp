@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>منوی غذاها | سفارش آنلاین غذا</title>
+    <!-- Bootstrap 5 RTL -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+    <!-- Vazir Font -->
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/font-face.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        /* Profil Stilleri */
+        .user-profile {
+            position: relative;
+            margin-right: 1rem;
+        }
+    
+        .profile-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: #3498db;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+    
+        .profile-icon:hover {
+            transform: scale(1.1);
+        }
+    
+        .profile-dropdown {
+            position: absolute;
+            left: 0;
+            top: 50px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            width: 300px;
+            z-index: 1000;
+            display: none;
+            padding: 1rem;
+        }
+    
+        .profile-dropdown.active {
+            display: block;
+        }
+    
+        .profile-header {
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+    
+        .profile-item {
+            margin: 0.5rem 0;
+            padding: 0.5rem;
+            background: #f8f9fa;
+            border-radius: 8px;
+        }
+        </style>
+</head>
+<body class="d-flex flex-column min-vh-100">
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-sm">
+    <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="#">
+            <img src="assets/images/logo.jpg" alt="لوگو" width="40" class="me-2" style="border-radius: 50%;">
+            <span data-translate="brand">سفارش آنلاین غذا</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto align-items-center">
+                <li class="nav-item">
+                    <a class="nav-link" href="home.html" data-translate="home">خانه</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="menu.html" data-translate="menu">منو</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html" data-translate="contact">تماس با ما</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link position-relative" href="checkout.html">
+                        <span data-translate="cart">سبد خرید</span>
+                        <span id="cart-count" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
+                    </a>
+                </li>
+                <!-- Yeni Profil Alanı -->
+                <li class="nav-item user-profile">
+                    <a href="profile.html"><div class="profile-icon" id="profileIcon"></div></a>
+                    <div class="profile-dropdown">
+                        <div class="profile-header">
+                            <h5 id="profileName"></h5>
+                            <small id="profileEmail"></small>
+                        </div>
+                        <div class="profile-body">
+                            <div class="profile-item">
+                                <i class="fas fa-phone me-2"></i>
+                                <span id="profilePhone"></span>
+                            </div>
+                            <div class="profile-item">
+                                <i class="fas fa-map-marker-alt me-2"></i>
+                                <span id="profileAddress"></span>
+                            </div>
+                            <hr>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+    <!-- Menu Hero Section -->
+    <section class="menu-hero bg-gradient-primary text-white">
+        <div class="container py-5">
+            <div class="row py-4">
+                <div class="col-12 text-center">
+                    <h1 class="display-5 fw-bold mb-3">منوی کامل غذاها</h1>
+                    <p class="lead">از بهترین غذاهای روز لذت ببرید</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Items -->
+    <main class="container py-5 flex-grow-1">
+        <div class="row g-4" id="menu-items">
+            <!-- Dynamic items will be inserted here -->
+        </div>
+    </main>
+
+    <!-- Footer (Same as index.html) -->
+    <footer class="bg-dark text-white mt-auto py-4">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <h5>درباره ما</h5>
+                    <p class="text-muted">ما بهترین انتخاب را برای شما فراهم می کنیم. کیفیت و سرعت در سرویس دهی اولویت ماست.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>لینک های مفید</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white text-decoration-none">قوانین و مقررات</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">سوالات متداول</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>تماس با ما</h5>
+                    <ul class="list-unstyled">
+                        <li>📞 +93584545845</li>
+                        <li>📧 shahrayrh@gmail.com</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="mt-4">
+            <p class="text-center mb-0">© 2025 تمام حقوق محفوظ است</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+        // Enhanced Menu Data
+        const menuItems = [
+            { 
+                id: 1, 
+                name: "کباب", 
+                price: 120000, 
+                image: "kebab.png",
+                category: "کباب",
+                description: "کباب با گوشت مرغوب و سبزیجات تازه"
+            },
+            { 
+                id: 2, 
+                name: "پیتزا مخصوص", 
+                price: 90000, 
+                image: "pizza.png",
+                category: "فست فود",
+                description: "پیتزا با پپرونی، قارچ و پنیر موزارلا"
+            }
+        ];
+
+        // Render Menu Items with Better Design
+        const menuContainer = document.getElementById("menu-items");
+        menuItems.forEach(item => {
+            menuContainer.innerHTML += `
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 shadow-sm border-0 hover-effect">
+                        <div class="position-relative">
+                            <img src="assets/images/${item.image}" class="card-img-top dish-image" alt="${item.name}">
+                            <span class="badge bg-primary position-absolute top-0 start-0 m-3">${item.category}</span>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">${item.name}</h5>
+                            <p class="card-text text-muted">${item.description}</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="h5 text-primary">${item.price.toLocaleString()} افغانی</span>
+                                <button onclick="addToCart(${item.id})" class="btn btn-primary rounded-pill px-4">
+                                    افزودن 
+                                    <i class="fas fa-cart-plus ms-2"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+        });
+    </script>
+</body>
+</html>

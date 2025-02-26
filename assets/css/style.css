@@ -1,0 +1,200 @@
+/* General Styles */
+body {
+    font-family: Vazir, sans-serif;
+    direction: rtl;
+    background-color: #f8f9fa;
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(45deg, #2c3e50, #3498db);
+    margin-top: 76px; /* Fixed navbar height */
+}
+
+.animate-float {
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0px); }
+}
+
+/* Cards */
+.card {
+    transition: transform 0.3s, box-shadow 0.3s;
+    border-radius: 15px;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-section p {
+        font-size: 1rem;
+    }
+    
+    .navbar-brand span {
+        font-size: 1rem;
+    }
+}
+
+/* Footer */
+footer {
+    border-top: 3px solid #3498db;
+}
+
+footer h5 {
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Menu Page Specific Styles */
+.menu-hero {
+    background: linear-gradient(45deg, #2c3e50, #3498db);
+    margin-top: 76px;
+    padding: 2rem 0;
+}
+
+.dish-image {
+    height: 250px;
+    object-fit: cover;
+    border-radius: 15px 15px 0 0;
+}
+
+.hover-effect {
+    transition: transform 0.3s, box-shadow 0.3s;
+    border-radius: 15px;
+    border: 1px solid rgba(0,0,0,0.1);
+}
+
+.hover-effect:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.badge.bg-primary {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .dish-image {
+        height: 200px;
+    }
+    
+    .card-title {
+        font-size: 1.1rem;
+    }
+    
+    .btn-rounded {
+        padding: 0.5rem 1rem;
+    }
+}
+
+/* Checkout Page Specific Styles */
+.checkout-hero {
+    background: linear-gradient(45deg, #2c3e50, #3498db);
+    margin-top: 76px;
+    padding: 2rem 0;
+}
+
+.steps {
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+.step {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: rgba(255,255,255,0.5);
+}
+
+.step.active {
+    color: white;
+}
+
+.step i {
+    font-size: 1.2rem;
+}
+
+.card.sticky-top {
+    top: 100px;
+}
+
+.quantity-control {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.quantity-btn {
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .checkout-hero h1 {
+        font-size: 1.8rem;
+    }
+    
+    .steps {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .card.sticky-top {
+        position: static !important;
+    }
+}
+
+
+/* ======================
+   CONTACT PAGE SPECIFIC
+   ====================== */
+   body.contact-page .contact-hero {
+    background: linear-gradient(45deg, #2c3e50, #3498db);
+    margin-top: 76px;
+    padding: 2rem 0;
+}
+
+body.contact-page .contact-info i {
+    min-width: 30px;
+}
+
+body.contact-page .contact-info h5 {
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+
+@media (max-width: 768px) {
+    body.contact-page .contact-hero h1 {
+        font-size: 1.8rem;
+    }
+    
+    body.contact-page .contact-info .d-flex {
+        flex-direction: column;
+        align-items: start !important;
+    }
+    
+    body.contact-page .contact-info i {
+        margin-bottom: 1rem;
+    }
+}
+
